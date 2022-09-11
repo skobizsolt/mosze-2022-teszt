@@ -4,24 +4,24 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //konstans változó neve: N_ELEMENTS
-    std::cout << '1-100 ertekek duplazasa' //hiányzó ;
-    for (int i = 0;) //ciklusmag hiányos (ciklusfeltétel, iterátor)
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 1; i < N_ELEMENTS; i++)
     {
-        b[i] = i * 2; //hiányzó dereferencia
+        b[i] = i * 2;
     }
-    for (int i = 0; i; i++) //hiányzó ciklusfeltétel
+    for (int i = 1; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" //hiányzó ;
+        std::cout << "Ertek:" << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++) //; helyett ,
+    double atlag;
+    for (int i = 1; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] //hiányzó ; és dereferencia
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
-    //hiányzó destruktor (delete b;)
+    delete b;
     return 0;
 }
