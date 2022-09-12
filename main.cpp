@@ -25,4 +25,5 @@ int main()
     delete b;
     return 0;
     std::cout << "Valami" << std::endl;
+    std::cout << "Valami csak most masik branchen" << std::endl;
 }
